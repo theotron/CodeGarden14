@@ -2,6 +2,8 @@
 
 Hybrid app for Umbraco CodeGarden 2014 conference 
 
+![Alt text](http://www.growcreate.co.uk/media/13617/codegarden.jpg)
+
 ### Installation
 
 1. Make sure Node JS is installed
