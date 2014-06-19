@@ -11,7 +11,7 @@ angular.module('codegarden.services', [])
       
     // Note: $http.get returns the promise of data, not the data itself 
         return $http
-          .get('http://codegarden14.local/umbraco/api/sessionapi/getschedule')
+          .get('http://codegarden14.projects.growcreate.co.uk/umbraco/api/sessionapi/getschedule')
           .then(function(response){
               return response.data;
           });   

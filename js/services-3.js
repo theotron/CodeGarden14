@@ -39,7 +39,7 @@ angular.module('codegarden.services', [])
         } else { 
           console.log('ONline, from umbraco...');
           data = $http
-            .get('http://codegarden14.local/umbraco/api/sessionapi/getschedule')
+            .get('http://codegarden14.projects.growcreate.co.uk/umbraco/api/sessionapi/getschedule')
             .then(function(response){ 
               localStorage["sessions"] = angular.toJson(response.data);
               localStorage["timestamp"] = new Date().getTime();
