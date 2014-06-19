@@ -24,7 +24,6 @@ Hybrid app for Umbraco CodeGarden 2014 conference
   ionic start cg14
   ```
 
-5. Replace the contents of the www folder with the contents of the repo
 6. Add platforms
 
   ```
@@ -32,6 +31,8 @@ Hybrid app for Umbraco CodeGarden 2014 conference
   ionic platform add android
   ```
 *Remember you need the relevant SDKs installed for this to work*
+
+5. Replace the contents of the www folder with the contents of the repo
 
 7. Build and run the app
 
@@ -42,4 +43,3 @@ Hybrid app for Umbraco CodeGarden 2014 conference
   ionic build android
   ionic emulate android
   ```
-
