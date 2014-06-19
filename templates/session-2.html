@@ -1,0 +1,13 @@
+<ion-view>
+    <ion-content class="has-header">
+        <div class="list card">
+            <div class="item">
+                <h2>{{session.title}}</h2>
+                <p>{{session.speaker.name}}</p>
+            </div>
+            <div class="item item-body">
+                <div ng-bind-html="session.description"></div>
+            </div>            
+        </div>
+    </ion-content>
+</ion-view>

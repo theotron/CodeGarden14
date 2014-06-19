@@ -1,0 +1,58 @@
+<ion-view title="Schedule">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon" ng-if="day.sessions.length"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+
+        <div ng-if="day">
+          <div class="title-box">
+            <h2>{{day.name}}</h2>
+          </div>        
+          <div class="list">
+              <span ng-repeat="session in day.sessions">
+                  <span ng-if="session.description && session.speakers.length > 0">
+                      <a ng-class="$root.online && session.speakers.length ? 'item-avatar' : ''" class="item item-icon-right" href="#/app/session/{{session.id}}">
+                        <img ng-src="{{session.speakers[0].photo}}" ng-if="$root.online && session.speakers.length" />
+                        <h2>{{session.title}}</h2>
+                        <p>{{session.time}} {{session.room}} room</p>
+                        <i class="icon ion-chevron-right"></i>
+                      </a>
+                  </span>
+                  <span ng-if="!session.description">
+                      <div class="item">
+                          <h2>{{session.title}}</h2>
+                          <p>{{session.time}} {{session.room}} room</p>
+                      </div>
+                  </span>
+              <span>
+          </div>
+        </div>
+
+        <div class="padding" ng-if="day.sessions.length == 0">
+          <h5>Tap on the star icon to make a handy list of your favourite sessions.</h5> 
+        </div>
+      </div>
+
+      <div ng-if="!$root.online">
+        <div class="title-box">
+          <h2>App offline</h2>
+        </div>
+        <div class="padding">
+          <h5>
+            <p>Please connect to the internet to download the conference information.</p>
+            <p><a class="button button-small button-stable button-clear" href="/index.html">Try again?</a></p>
+          </h5>
+        </div>
+      </div>
+
+      <div ng-if="!day && $root.online">
+        <div class="title-box">
+          <h2>Just a mo</h2>
+        </div>
+        <div class="padding">
+          <h5>Getting conference information...</h5> 
+        </div>
+      </div>
+
+    </ion-content>
+</ion-view>

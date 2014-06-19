@@ -1,0 +1,30 @@
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu side="left" ng-if="days.length">
+    <header class="bar bar-header bar-stable">
+      <h1 class="title">CodeGarden 2014</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item ng-repeat="day in days" nav-clear menu-close href="#/app/sessions/{{day.id}}" class="item item-icon-left">
+          <i class="icon ion-calendar"></i>          
+          {{day.name}}          
+          <span class="badge badge-stable">{{day.sessions.length}}</span>
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/sessions/-1" class="item item-icon-left">
+          <i class="icon ion-star"></i>           
+          My favourites          
+          <span class="badge badge-stable">{{$root.favs.sessions.length || 0}}</span>
+        </ion-item>        
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+</ion-side-menus>

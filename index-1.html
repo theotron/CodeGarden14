@@ -1,0 +1,52 @@
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CodeGarden 2014 app</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- Our app files -->
+    <script>
+
+      // GrowCreate: CodeGarden 2014 app 
+      angular.module('codegarden', ['ionic'])
+
+      .controller('SessionsCtrl', function($scope) {
+
+        $scope.sessions = [
+          { title: 'Going native with Umbraco and Phonegap' },
+          { title: 'Embrace, Extend & Enrich: The Analytics for Umbraco story' },
+          { title: 'Planning an Umbraco Build' },
+          { title: 'MVC Purée' }
+        ];
+
+      });
+
+    </script>
+
+    <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
+    <script src="cordova.js"></script>
+  </head>
+  
+  <body ng-app="codegarden" ng-controller="SessionsCtrl">
+    <ion-side-menus>
+
+      <!-- Center content -->
+      <ion-side-menu-content>
+        <ion-header-bar class="bar-dark">
+          <h1 class="title">CodeGarden 14</h1>
+        </ion-header-bar>
+        <ion-content>
+          <!-- sessions -->
+          <ion-list>
+            <ion-item ng-repeat="session in sessions">
+              {{session.title}}
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-side-menu-content>
+  </body>
+
+</html>

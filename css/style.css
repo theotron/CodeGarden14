@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+
+body{
+	background: url('../img/bgtexturedarkhd.jpg') #333;
+	color: #fff;
+}
+
+img.responsive{
+	width: 100%;
+	height: auto;
+}
+.padding img.responsive{
+	border-radius: 50%;
+}
+.padding h5{
+	text-align: center;
+}
+
+.title-box{
+	margin: 10px 0;
+	position: relative;
+	background: url('../img/cgart1200.png') no-repeat center;
+	background-size: cover;
+	text-align: center;
+	padding: 80px 10px;
+	text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+.ion-chevron-right{
+	opacity: 0.2;
+	font-size: 12px;
+}
+.icon{
+	font-size: 20px !important;
+}

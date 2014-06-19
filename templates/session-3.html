@@ -1,0 +1,32 @@
+<ion-view title="{{session.time}} {{session.room}} room">
+    <ion-nav-buttons side="right">
+        <button ng-click="toggleFavs()" ng-class="findFav() > -1 ? 'button-assertive' : ''" class="button button-clear"><i class="icon ion-star"></i></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div class="padding">
+            <div class="padding">
+                <h3>{{session.title}}</h3>
+                <p><img ng-if="$root.online" ng-src="{{session.speakers[0].photo}}" class="responsive"></p>
+                <div compile="session.description"></div>
+            </div>
+        </div>
+        <div class="list card" ng-repeat="speaker in session.speakers">
+            <div class="item item-dark">
+                <h3>{{speaker.name}}, {{speaker.company}}</h3>                    
+            </div>
+            <div class="item item-body item-dark">
+                <span compile="speaker.bio"></span>
+                <p>
+                    <a class="button button-stable button-small button-clear" ng-click="GotoLink(speaker.url)">
+                      <i class="icon ion-android-earth"></i>
+                      {{speaker.company}}
+                    </a>
+                    <a class="button button-stable button-small button-clear" ng-click="GotoLink('https://twitter.com/' + speaker.twitter)">
+                      <i class="icon ion-social-twitter"></i>
+                      {{speaker.twitter}}
+                    </a>
+                </p>                
+              </div>
+        </div>
+    </ion-content>
+</ion-view>
