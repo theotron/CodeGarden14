@@ -6,6 +6,12 @@ Hybrid app for Umbraco CodeGarden 2014 conference
 
 See it action at http://codegarden14.projects.growcreate.co.uk/app/demo/index.html
 
+### Presentation
+
+I presented this app in CodeGarden 2014 conference. You can see the slide deck here:
+
+http://www.slideshare.net/TheoParaskevopoulos/mobile-apps-with-umbraco-and-phonegap
+
 ### Installation
 
 1. Make sure Node JS is installed
